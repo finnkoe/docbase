@@ -6,7 +6,7 @@ project(docbase VERSION 0.1.0 LANGUAGES CXX)
 # This may later be split into smaller domain-specific libraries
 # such as import, storage, analysis, and search.
 add_library(docbase_core
-        src/placeholder.cpp
+        src/fileReader.cpp
 )
 
 target_compile_features(docbase_core
