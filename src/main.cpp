@@ -4,7 +4,7 @@
 #include "docbase/cli.hpp"
 
 int main(int argc, char* argv[]) {
-    docbase::commands(argc,argv);
+    docbase::cli::run(argc,argv);
 
     return 0;
 }

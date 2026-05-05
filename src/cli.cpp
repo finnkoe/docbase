@@ -10,7 +10,7 @@ void printHelp() {
     std::cout << "read <filepath>" << std::endl;
 }
 
-int docbase::commands(int argc,char* argv[]) {
+int docbase::cli::run(int argc,char* argv[]) {
     if (argc < 2) {
         printHelp();
         return 0;

@@ -1,6 +1,6 @@
 #pragma once
-namespace docbase {
+namespace docbase::cli {
 
-    int commands(int argc, char* argv[]);
+    int run(int argc, char* argv[]);
 
 }
