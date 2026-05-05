@@ -1,18 +1,19 @@
 #include "docbase/fileReader.hpp"
 #include <iostream>
+#include <fstream>
 
 std::string docbase::readFileAsString(
     const std::filesystem::path& path
     ) {
     std::fstream file (path);
     if (!file) {
-        std::cerr << "Datei wurde nicht gefunden!" << std::endl;
-        return "Datei nicht gefunden!";
+        throw std::runtime_error("Could not open file");
     }
 
     std::string line;
+    std::stringstream ss;
     while (getline(file,line)) {
-        std::cout << line << std:: endl;
+        ss << line << std::endl;
     }
-    return "Datei gelesen!";
+    return ss.str();
 }

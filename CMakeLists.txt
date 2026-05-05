@@ -7,6 +7,7 @@ project(docbase VERSION 0.1.0 LANGUAGES CXX)
 # such as import, storage, analysis, and search.
 add_library(docbase_core
         src/fileReader.cpp
+        src/cli.cpp
 )
 
 target_compile_features(docbase_core
